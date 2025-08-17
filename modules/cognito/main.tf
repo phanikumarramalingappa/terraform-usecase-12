@@ -95,7 +95,7 @@ resource "aws_cognito_user_pool_client" "main" {
 }
 
 resource "aws_cognito_user_pool_domain" "default_domain" {
-  domain       = "narendiran-user-pool"  # unique prefix for your domain
+  domain       = "phani-user-pool"  # unique prefix for your domain
   user_pool_id = aws_cognito_user_pool.main.id
 }
 # Create a test user (optional - for development)
@@ -104,11 +104,11 @@ resource "aws_cognito_user" "test_user" {
   username     = "testuser"
 
   attributes = {
-    email          = "narendiran.sankar@hcltech.com"
+    email          = "phanikumar.ramal@hcltech.com"
     email_verified = "true"
   }
 
-  temporary_password = "Naren@123"
+  temporary_password = "Phani@123"
   message_action     = "SUPPRESS"
 
   lifecycle {
